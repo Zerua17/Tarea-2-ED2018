@@ -1,0 +1,120 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    class Class1
+    {
+        static void Main(string[] args)
+        {
+            electrodomestico a = new electrodomestico();
+            
+
+            Random aleatorio = new Random();
+            int colorconsumicion;
+            float preciocolor;
+            preciocolor = 0;
+            colorconsumicion = aleatorio.Next(1, 7);
+            switch(colorconsumicion)
+            {
+                case 1:
+                    a.Setconsumoenergetico ("A");
+                    preciocolor = 100;
+                    break;
+                case 2:
+                    a.Setconsumoenergetico("B");
+                    preciocolor = 80;
+                    break;
+                case 3:
+                    a.Setconsumoenergetico("C");
+                    preciocolor = 60;
+                    break;
+                case 4:
+                    a.Setconsumoenergetico("D");
+                    preciocolor = 50;
+                    break;
+                    case 5:
+                    a.Setconsumoenergetico("E");
+                    preciocolor = 30;
+                    break;
+                    case 6:
+                    a.Setconsumoenergetico("F");
+                    preciocolor = 10;
+                    break;
+
+            }
+
+            int color;
+            
+            color = aleatorio.Next(1, 6);
+            switch (colorconsumicion)
+            {
+                case 1:
+                    a.Setcolor("BLANCO");
+             
+                    break;
+                case 2:
+                    a.Setcolor("NEGRO");
+                    
+                    break;
+                case 3:
+                    a.Setcolor("ROJO");
+               
+                    break;
+                case 4:
+                    a.Setcolor("GRIS");
+                   
+                    break;
+                case 5:
+                    a.Setcolor("AZUL");
+           
+                    break;
+
+            }
+            float PRECIOPESO;
+            int PESO;
+            PRECIOPESO = 0;
+            PESO = aleatorio.Next(0, 81);
+
+            if (PESO < 20)
+            {
+                PRECIOPESO = 10;
+            }
+  
+            if (PESO > 19 && PESO<50)
+            {
+                PRECIOPESO = 50;
+            }
+    
+            if (PESO > 49 && PESO <80)
+            {
+                PRECIOPESO = 80;
+            }
+            PRECIOPESO = 0;
+            PESO = aleatorio.Next(0, 81);
+            if (PESO == 80)
+            {
+                PRECIOPESO = 100;
+            }
+            float preciobase;
+            preciobase = preciocolor + PRECIOPESO;
+
+
+
+
+
+
+
+
+
+            Console.WriteLine(a.Getcolor());
+            Console.WriteLine(a.Getconsumoenergito());
+            Console.WriteLine(a.Getpeso());
+            Console.WriteLine(" {0}" , preciocolor );
+            Console.ReadKey();
+        }
+    }
+}
