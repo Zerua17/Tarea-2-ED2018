@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    public class electrodomestico
+    {
+        private String color;
+        private String consumoenergetico;
+        private String precio;
+        private String peso;
+
+        public string Getcolor()
+        {
+        return this.color;
+        }
+        public void Setcolor(string color)
+        {
+            this.color = color;
+        }
+        public string Getconsumoenergito()
+        {
+            return this.consumoenergetico;
+        }
+        public void Setconsumoenergetico(string consumoenergito)
+        {
+            this.consumoenergetico = consumoenergito;
+        }
+        public string Getprecio()
+        {
+            
+            return this.precio;
+        }
+        public void Setprecio(string precio)
+        {
+            this.precio = precio;
+        }
+        public string Getpeso()
+        {
+            return this.peso;
+        }
+        public void Setpeso(string peso)
+        {
+            this.peso = peso;
+          
+        }
+        public electrodomestico()
+        {
+            color="blanco";
+           consumoenergetico="F";
+            peso="5 kg";
+            precio="0";
+        }
+        
+
+    } 
