@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Proyecto
+{
+    class Lavarropa:electrodomestico
+    {
+        private int Carga;
+ 
+        public Lavarropa()
+        {
+            Carga = 10;
+        }
+        public int GetCarga()
+        {
+            return Carga;
+        }
+        public void SetCarga(int nuevoValor)
+        {
+            Carga = nuevoValor;
+        }
+
+        public float GetPrecio(float PrecioFinal)
+        {
+            if (Carga > 10) 
+                return (PrecioFinal*30/100)+ PrecioFinal;
+            else
+                return PrecioFinal;
+        }
+
+       
+    }
+}
+
+namespace Proyecto
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Lavarropa miLavarropa = new Lavarropa();
+            Console.WriteLine("El peso del lavarropa es: {0}", miLavarropa.GetCarga());
+            Console.ReadKey();
+        }
+    }
+}
