@@ -1,0 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+     public class electrodomestico
+    {
+        private String color;
+        private String consumoenergetico;
+        private String precio;
+        private String peso;
+    }
+}
