@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    class Cocina : Electrodomesticos
+    {
+        private float Profundidad, Alto, Ancho;
+        private string Alimentación;
+        public Cocina() // contructor por defecto 
+        {
+            Ancho = 65 / 100;
+            Alto = 85 / 100;
+            Profundidad = 65 / 100;
+            Alimentación = "Gas";
+        }
+        public float GetAncho()
+        {
+            return Ancho;
+        }
+        public float GetAlto()
+        {
+            return Alto;
+        }
+        public float GetProfundidad()
+        {
+            return Profundidad;
+        }
+        public string GetAlimentacion()
+        {
+            return this.Alimentación;
+        }
+        public void SetAncho(float nuevovalor)
+        {
+            Ancho = nuevovalor;
+        }
+        public void SetAlto(float nuevovalor)
+        {
+            Alto = nuevovalor;
+        }
+        public void SetProfundidad(float nuevovalor)
+        {
+            Profundidad = nuevovalor;
+        }
+        public void SetAlimentacion(string nuevovalor)
+        {
+            Alimentación = nuevovalor;
+        }
+        public float GetPrecio(float PrecioFinal)
+        {
+            if ((Ancho >= 60) && (Ancho <= 79))
+            {
+                return (PrecioFinal * 15 / 100) + PrecioFinal;
+            }
+            if ((Ancho >= 80) && (Ancho <= 99))
+            {
+                return (PrecioFinal * 20 / 100) + PrecioFinal;
+            }
+            if (Ancho >= 100)
+            {
+                return (PrecioFinal * 30 / 100) + PrecioFinal;
+            }
+            return PrecioFinal;
+        }
+    }
+} 
